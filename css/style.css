@@ -1,0 +1,207 @@
+/* VIDEO STYLE FASHION SECTION */
+
+.fashion-showcase{
+    width:100%;
+    background:#fff;
+    padding:40px 20px 20px;
+    overflow:hidden;
+}
+
+.fashion-top{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+}
+
+.fashion-track{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:55px;
+    transition:0.6s ease;
+}
+
+.fashion-item{
+    width:150px;
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    transition:0.5s ease;
+}
+
+.fashion-item img{
+    height:100%;
+    width:auto;
+    object-fit:contain;
+    transition:0.5s ease;
+}
+
+.fashion-item.center img{
+    transform:scale(1.18);
+}
+
+.slide-btn{
+    position:absolute;
+    bottom:20px;
+    border:1px solid #ccc;
+    background:white;
+    color:#333;
+    width:35px;
+    height:24px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:20px;
+}
+
+.slide-btn.left{
+    right:65px;
+}
+
+.slide-btn.right{
+    right:20px;
+}
+
+.fashion-products{
+    margin-top:20px;
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.small-card{
+    min-width:150px;
+    background:#f1f1f1;
+    border-radius:4px;
+    position:relative;
+    padding:8px;
+    text-align:left;
+}
+
+.small-card img{
+    width:100%;
+    height:95px;
+    object-fit:cover;
+    border-radius:3px;
+}
+
+.small-card h4{
+    font-size:12px;
+    margin:6px 0 2px;
+    color:#111;
+}
+
+.small-card p{
+    font-size:12px;
+    font-weight:bold;
+    color:#000;
+}
+
+.heart{
+    position:absolute;
+    top:8px;
+    left:8px;
+    background:white;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    text-align:center;
+    line-height:20px;
+    font-size:14px;
+}
+
+
+/* BLACK PROMO SECTION */
+
+.black-promo{
+    margin-top:40px;
+    background:#050505;
+    color:white;
+    min-height:420px;
+    padding:35px 40px;
+    border-radius:0 0 25px 25px;
+    position:relative;
+    overflow:hidden;
+}
+
+.promo-text{
+    max-width:380px;
+    font-size:12px;
+    line-height:1.6;
+    color:#ccc;
+}
+
+.black-promo h2{
+    position:absolute;
+    right:40px;
+    top:35px;
+    font-size:30px;
+    text-align:right;
+    letter-spacing:2px;
+    font-weight:400;
+}
+
+.promo-cards{
+    margin-top:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:22px;
+}
+
+.promo-card{
+    background:#ddd;
+    border-radius:18px;
+    overflow:hidden;
+    transition:0.5s;
+}
+
+.promo-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.promo-card.small{
+    width:110px;
+    height:230px;
+    opacity:0.8;
+}
+
+.promo-card.medium{
+    width:130px;
+    height:260px;
+}
+
+.promo-card.big{
+    width:155px;
+    height:300px;
+    transform:scale(1.08);
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+    .fashion-track{
+        gap:25px;
+    }
+
+    .fashion-item{
+        width:100px;
+        height:190px;
+    }
+
+    .black-promo h2{
+        position:static;
+        text-align:left;
+        margin-top:20px;
+        font-size:22px;
+    }
+
+    .promo-cards{
+        overflow-x:auto;
+        justify-content:flex-start;
+    }
+}

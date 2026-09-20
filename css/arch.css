@@ -1,0 +1,184 @@
+/* ARCH PRODUCT HIGHLIGHT COVERFLOW */
+.arch-coverflow-section{
+    width:100%;
+    padding:40px 20px;
+    background:#f8f3ec;
+    text-align:center;
+    overflow:hidden;
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.arch-coverflow-section h2{
+    font-size:34px;
+    color:#111;
+    margin-bottom:8px;
+    font-family:Georgia, serif;
+    text-align:center;
+    width:100%;
+}
+
+.arch-subtitle{
+    color:#777;
+    font-size:14px;
+    margin-bottom:35px;
+    text-align:center;
+    width:100%;
+}
+
+.arch-slider{
+    width:100%;
+    height:430px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.arch-item{
+    position:absolute;
+    transition:0.6s ease;
+    opacity:0;
+}
+
+.arch-bg{
+    width:280px;
+    height:380px;
+    border-radius:120px 120px 0 0;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.arch-bg img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Center image */
+.arch-item.active{
+    opacity:1;
+    transform:translateX(0) scale(1.25);
+    z-index:5;
+}
+
+/* Left medium */
+.arch-item.prev{
+    opacity:1;
+    transform:translateX(-310px) scale(0.95) rotate(-2deg);
+    z-index:4;
+}
+
+/* Right medium */
+.arch-item.next{
+    opacity:1;
+    transform:translateX(310px) scale(0.95) rotate(2deg);
+    z-index:4;
+}
+
+/* Far left small */
+.arch-item.far-prev{
+    opacity:1;
+    transform:translateX(-560px) scale(0.78) rotate(-4deg);
+    z-index:3;
+}
+
+/* Far right small */
+.arch-item.far-next{
+    opacity:1;
+    transform:translateX(560px) scale(0.78) rotate(4deg);
+    z-index:3;
+}
+
+/* Different background colors */
+.bg1{
+    background:#d99aaa;
+}
+
+.bg2{
+    background:#747bc6;
+}
+
+.bg3{
+    background:#c1847d;
+}
+
+.bg4{
+    background:#79b6aa;
+}
+
+.bg5{
+    background:#d8526d;
+}
+
+/* Arrow Buttons */
+.arch-buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    width:100%;
+    position:relative;
+    z-index:20;
+}
+
+.arch-buttons button{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:none;
+    background:#4b8bde;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+    transition:0.3s ease;
+}
+
+.arch-buttons button:hover{
+    background:#111;
+    transform:scale(1.08);
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .arch-slider{
+        height:280px;
+    }
+
+    .arch-bg{
+        width:160px;
+        height:220px;
+    }
+
+    .arch-item.active{
+        transform:translateX(0) scale(1.1);
+    }
+
+    .arch-item.prev{
+        transform:translateX(-150px) scale(0.85);
+    }
+
+    .arch-item.next{
+        transform:translateX(150px) scale(0.85);
+    }
+
+    .arch-item.far-prev{
+        transform:translateX(-270px) scale(0.65);
+    }
+
+    .arch-item.far-next{
+        transform:translateX(270px) scale(0.65);
+    }
+
+    .arch-buttons{
+        margin-top:-10px;
+    }
+}

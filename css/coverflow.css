@@ -1,0 +1,64 @@
+.coverflow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.coverflow-item {
+    width: 180px;
+    transition: 0.50s;
+     opacity: 0.4;
+    transform: scale(0.85);
+
+    text-align: center;
+}
+
+.coverflow-item img {
+    width:150%;
+    border-radius: 12px;
+}
+
+.coverflow-item.active {
+    transform: scale(1.2);
+    opacity: 1;
+    z-index: 2;
+}
+
+.title {
+    font-weight: bold;
+    margin-top: 8px;
+}
+.desc {
+    font-size: 13px;
+    color:darkolivegreen;
+    margin: 5px 0;
+}
+
+.price {
+    color: green;
+    margin: 5px 0;
+}
+
+.cart-btn {
+    padding: 6px 10px;
+    background: rgba(255, 111, 0, 0.867);
+    color: white;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.order-btn {
+    padding: 6px 10px;
+    background: #008000;
+    color: white;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
